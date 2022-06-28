@@ -25,7 +25,9 @@ pub struct Execute<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
     pub system_program: Program<'info, System>,
+    /// CHECK:
     pub chainlink_program: AccountInfo<'info>,
+    /// CHECK:
     pub chainlink_feed: AccountInfo<'info>
 }
 
