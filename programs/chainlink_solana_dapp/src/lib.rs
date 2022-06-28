@@ -27,3 +27,8 @@ pub struct Execute<'info> {
     pub chainlink_program: AccountInfo<'info>,
 
 }
+
+#[acount]
+pub struct ResultAccount{
+    pub value: i128;
+}
