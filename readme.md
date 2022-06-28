@@ -14,3 +14,11 @@ mocha
 ```
 solana-keygen new -o id.json
 ```
+2. To airdrop sol to the account copy the pubKey address and run the following command:
+```
+solana airdrop 2 <copied pubKey address>
+```
+3. Check blanace:
+```
+solana balance <copied pubKey address>
+```
