@@ -15,8 +15,11 @@ describe("chainlink_solana_dapp", () => {
         user: provider.wallet.publicKey,
         chainlinkFeed: CHAINLINK_FEED,
         chainlinkProgram: CHAINLINK_PROGRAM_ID
-
-      }
-    })  
+      },
+      singers: [resultAccount],
+    });
+    const latestPrice = await program.account.resultAccount.fetch(resultAccount.publicKey);
+    console.log("Price is " + latestPrice.value / 100000000);
+    
   })
 });
