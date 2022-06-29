@@ -36,3 +36,5 @@ solana address -k ./target/deploy/chainlink_solana_dapp-keypair.json
 ```
 anchor test
 ```
+
+This will print the current solana price in USD from chainlink.
