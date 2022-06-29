@@ -22,3 +22,17 @@ solana airdrop 2 <copied pubKey address>
 ```
 solana balance <copied pubKey address>
 ```
+4. Compile the program:
+```
+anchor build
+```
+5. After compiling we can retrieve the program ID:
+```
+solana address -k ./target/deploy/chainlink_solana_dapp-keypair.json
+```
+6. Copy the program ID and update on `lib.rs` (on `declare_id` marro call) and `Anchor.toml` (for the key `chainlink_solana_dapp`) files
+7. Run anchor build again
+8. Run the test
+```
+anchor test
+```
