@@ -10,10 +10,11 @@ pub mod chainlink_solana_dapp {
 
     pub fn execute(ctx: Context<Execute>) -> ProgramResult {
         let round = chainlink::latest_round_data(ctx.accounts.chainlink_program.to_account_info(),
-        ctx.accounts.chainlink_feed.to_account_info());
+        ctx.accounts.chainlink_feed.to_account_info())?;
         let result_account = &mut ctx.accounts.result_account;
+       
         result_account.value = round.answer;
-        Ok(());
+        Ok(())
     }
     
 }
@@ -31,7 +32,7 @@ pub struct Execute<'info> {
     pub chainlink_feed: AccountInfo<'info>
 }
 
-#[acount]
+#[account]
 pub struct ResultAccount{
-    pub value: i128;
+    pub value: i128,
 }
