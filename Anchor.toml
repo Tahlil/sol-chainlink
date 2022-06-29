@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.devnet]
-chainlink_solana_dapp = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+chainlink_solana_dapp = "DPeHYP8iSY27TwcKDyhH5ne2G2VygLfJa3rBhz3xobbN"
 
 [registry]
 url = "https://anchor.projectserum.com"

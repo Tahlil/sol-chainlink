@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use chainlink_solana as chainlink;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("DPeHYP8iSY27TwcKDyhH5ne2G2VygLfJa3rBhz3xobbN");
 
 #[program]
 pub mod chainlink_solana_dapp {
