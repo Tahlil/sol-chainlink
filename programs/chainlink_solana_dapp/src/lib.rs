@@ -27,6 +27,7 @@ pub struct Execute<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
     #[account(address = system_program::ID)]
+    /// CHECK:
     pub system_program: AccountInfo<'info>,
     /// CHECK:
     pub chainlink_program: AccountInfo<'info>,
