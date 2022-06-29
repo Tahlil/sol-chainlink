@@ -1,5 +1,6 @@
 use anchor_lang::prelude::*;
 use chainlink_solana as chainlink;
+use anchor_lang::solana_program::system_program;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
 declare_id!("DPeHYP8iSY27TwcKDyhH5ne2G2VygLfJa3rBhz3xobbN");
@@ -25,7 +26,8 @@ pub struct Execute<'info> {
     pub result_account: Account<'info, ResultAccount>,
     #[account(mut)]
     pub user: Signer<'info>,
-    pub system_program: Program<'info, System>,
+    #[account(address = system_program::ID)]
+    pub system_program: AccountInfo<'info>,
     /// CHECK:
     pub chainlink_program: AccountInfo<'info>,
     /// CHECK:
